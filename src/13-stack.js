@@ -11,16 +11,21 @@
  *
  */
 class Stack {
-  push(/* element */) {
-    throw new Error('Not implemented');
+  constructor() {
+    this.array = [];
+  }
+
+  push(el) {
+    if (!el) throw new Error('Not implemented');
+    this.array.push(el);
   }
 
   pop() {
-    throw new Error('Not implemented');
+    return this.array.pop();
   }
 
   peek() {
-    throw new Error('Not implemented');
+    return this.array[this.array.length - 1];
   }
 }
 
